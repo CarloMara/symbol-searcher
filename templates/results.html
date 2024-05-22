@@ -1,0 +1,16 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Results for "{{ symbol_name }}"</h1>
+    <ul>
+        {% for result in results %}
+            <li>File: {{ result[3] }}, Address: {{ result[0] }}, Type: {{ result[1] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to search</a>
+</body>
+</html>
