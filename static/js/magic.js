@@ -31,9 +31,12 @@ function resizeColumns(e) {
     const dx = e.clientX - startX;
     const newWidthColumn1 = startWidthColumn1 + dx;
     const newWidthColumn2 = startWidthColumn2 - dx;
+    document.documentElement.style.setProperty('--c1', newWidthColumn1+"px");
+    document.documentElement.style.setProperty('--c2', newWidthColumn2+"px");
 
-    column1.style.width = `${newWidthColumn1}px`;
-    column2.style.width = `${newWidthColumn2}px`;
+
+    column1.style.width = 'var(--c1)';
+    column2.style.width = 'var(--c2)';
 }
 
 function stopResize() {

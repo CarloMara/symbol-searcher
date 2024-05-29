@@ -1,3 +1,8 @@
+:root {
+    --c1: '15%';
+    --c2: '85%';
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -47,13 +52,13 @@ table {
 .column-1 {
     background-color: #e9e9e9;
     min-width: 100px; /* Minimum width for column 1 */
-    width: 15%;
+    width: var(--c1);
 }
 
 .column-2 {
     background-color: #d9d9d9;
     min-width: 200px; /* Minimum width for column 2 */
-    width: 85%;
+    width: var(--c2);
 }
 
 .resizer {
