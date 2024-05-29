@@ -26,17 +26,11 @@ function initResize(e) {
 }
 
 function resizeColumns(e) {
-    const column1 = document.querySelector('.column-1');
-    const column2 = document.querySelector('.column-2');
     const dx = e.clientX - startX;
     const newWidthColumn1 = startWidthColumn1 + dx;
     const newWidthColumn2 = startWidthColumn2 - dx;
     document.documentElement.style.setProperty('--c1', newWidthColumn1+"px");
     document.documentElement.style.setProperty('--c2', newWidthColumn2+"px");
-
-
-    column1.style.width = 'var(--c1)';
-    column2.style.width = 'var(--c2)';
 }
 
 function stopResize() {
